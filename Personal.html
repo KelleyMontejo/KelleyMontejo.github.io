@@ -2,10 +2,8 @@
 <html>
   <head>
     <title> MadLib</title>
-    
   </head>
 <body>
-  text-align: center;
   <h1> Create your own MadLib </h1>
   <p id="instructions">Enter a word according to what the story asks for. Example: Adjective, Verb, Noun, ect.</p>
   <input type="string" id="ADJECTIVE1" placeholder="ADJECTIVE">
@@ -40,7 +38,7 @@
   <br>
   <input type="string" id="PNoun2" placeholder="PLURAL NOUN">
   <br>
-  <input type="string" id="Shape1" placeholder="SHAPE">
+  <input type="string" id="Shape" placeholder="SHAPE">
   <br>
   <input type="string" id="ADJECTIVE6" placeholder="ADJECTIVE">
   <br>
@@ -56,8 +54,49 @@
   <br>
   <input type="string" id="PNoun5" placeholder="ANOTHER PLURAL NOUN">
   <br>
-
+  <button id="generateButton">Generate Mad Lib</button>
 </body>
+<script>
+        document.getElementById('generateButton').addEventListener('click', function() {
+          const adjective1 = document.getElementById('ADJECTIVE1').value;
+          const adjective2 = document.getElementById('ADJECTIVE2').value;
+          const adjective3 = document.getElementById('ADJECTIVE3').value;
+          const adjective4 = document.getElementById('ADJECTIVE4').value;
+          const adjective5 = document.getElementById('ADJECTIVE5').value;
+          const adjective6 = document.getElementById('ADJECTIVE6').value;
+          const adjective7 = document.getElementById('ADJECTIVE7').value;
+          const Color1 = document.getElementById('Color1').value;
+          const Color2 = document.getElementById('Color2').value;
+          const Noun1 = document.getElementById('Noun1').value;
+          const Noun2 = document.getElementById('Noun2').value;
+          const Noun3 = document.getElementById('Noun3').value;
+          const Noun4 = document.getElementById('Noun4').value;
+          const Noun5 = document.getElementById('Noun5').value;
+          const Emotion1 = document.getElementById('Emotion1').value;
+          const Emotion2 = document.getElementById('Emotion2').value;
+          const PNoun1 = document.getElementById('PNoun1').value;
+          const PNoun2 = document.getElementById('PNoun2').value;
+          const PNoun3 = document.getElementById('PNoun3').value;
+          const PNoun4 = document.getElementById('PNoun4').value;
+          const PNoun5 = document.getElementById('PNoun5').value;
+          const Shape = document.getElementById('Shape').value;
+          const verb1 = document.getElementById('verb1').value;
+          const verb2 = document.getElementById('verb2').value;
+          
+
+        <div id = "StoryOutline"> </div>
+                                                                   
+            const story = `One sunny ${ADJECTIVE1} afternoon, the big day finally arrived! The ${ADJECTIVE2} couple, dressed in ${Color1} and ${Color2}, stood at the end of the ${Noun1}
+            as their family and friends cheered. The ceremony was filled with ${Emotion1} , as the officiant declared, “I now pronounce you ${Noun2} and ${Noun3}!” The couple sealed the 
+            deal with a ${ADJECTIVE3} kiss that made everyone ${Verb1} in delight. At the reception, the ${ADJECTIVE4} cake stole the show. It was shaped like a ${Noun4} and topped with 
+            ${PNoun1}. The guests were so impressed that they yelled out " ${ADJECTIVE5} ${Noun5}!". The highlight of the evening was the first dance. The couple twirled like ${PNoun2}
+            on the dance floor. Everyone joined in, forming a ${Shape} around the happy pair. By the end of the night, even the ${ADJECTIVE6} guests were up and ${Verb2}-ING! It was a 
+            ${ADJECTIVE7} day full of ${PNoun3}, laughter, and ${PNoun4}.  As the couple left for their ${Emotion2} honeymoon, everyone waved their ${PNoun5}.`;
+
+            document.getElementById('StoryOutline').innerHTML = story;
+        });
+    </script>
+
 
 
 
