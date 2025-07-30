@@ -6,57 +6,57 @@
 <body>
   <h1> Create your own MadLib </h1>
   <p id="instructions">Enter a word according to what the story asks for. Example: Adjective, Verb, Noun, ect.</p>
-  <input type="string" id="ADJECTIVE1" placeholder="ADJECTIVE">
+  <input type="text" id="ADJECTIVE1" placeholder="ADJECTIVE">
   <br>
-  <input type="string" id="ADJECTIVE2" placeholder="ANOTHER ADJECTIVE">
+  <input type="text" id="ADJECTIVE2" placeholder="ANOTHER ADJECTIVE">
   <br>
-  <input type="string" id="Color1" placeholder="COLOR">
+  <input type="text" id="Color1" placeholder="COLOR">
   <br>
-  <input type="string" id="Color2" placeholder="ANOTHER COLOR">
+  <input type="text" id="Color2" placeholder="ANOTHER COLOR">
   <br>
-  <input type="string" id="Noun1" placeholder="NOUN">
+  <input type="text" id="Noun1" placeholder="NOUN">
   <br>
-  <input type="string" id="Emotion1" placeholder="ANOTHER ADJECTIVE">
+  <input type="text" id="Emotion1" placeholder="ANOTHER ADJECTIVE">
   <br>
-  <input type="string" id="Noun2" placeholder="ANOTHER NOUN">
+  <input type="text" id="Noun2" placeholder="ANOTHER NOUN">
   <br>
-  <input type="string" id="Noun3" placeholder="ANOTHER NOUN">
+  <input type="text" id="Noun3" placeholder="ANOTHER NOUN">
   <br>
-  <input type="string" id="ADJECTIVE3" placeholder="ANOTHER ADJECTIVE">
+  <input type="text" id="ADJECTIVE3" placeholder="ANOTHER ADJECTIVE">
   <br>
-  <input type="string" id="Verb1" placeholder="VERB">
+  <input type="text" id="Verb1" placeholder="VERB">
   <br>
-  <input type="string" id="ADJECTIVE4" placeholder="ANOTHER ADJECTIVE">
+  <input type="text" id="ADJECTIVE4" placeholder="ANOTHER ADJECTIVE">
   <br>
-  <input type="string" id="Noun4" placeholder="ANOTHER NOUN">
+  <input type="text" id="Noun4" placeholder="ANOTHER NOUN">
   <br>
-  <input type="string" id="PNoun1" placeholder="PLURAL NOUN">
+  <input type="text" id="PNoun1" placeholder="PLURAL NOUN">
   <br>
-  <input type="string" id="ADJECTIVE5" placeholder="ANOTHER ADJECTIVE">
+  <input type="text" id="ADJECTIVE5" placeholder="ANOTHER ADJECTIVE">
   <br>
-  <input type="string" id="Noun5" placeholder="ANOTHER NOUN">
+  <input type="text" id="Noun5" placeholder="ANOTHER NOUN">
   <br>
-  <input type="string" id="PNoun2" placeholder="PLURAL NOUN">
+  <input type="text" id="PNoun2" placeholder="PLURAL NOUN">
   <br>
-  <input type="string" id="Shape" placeholder="SHAPE">
+  <input type="text" id="Shape" placeholder="SHAPE">
   <br>
-  <input type="string" id="ADJECTIVE6" placeholder="ADJECTIVE">
+  <input type="text" id="ADJECTIVE6" placeholder="ADJECTIVE">
   <br>
-  <input type="string" id="Verb2" placeholder="ANOTHER VERB">
+  <input type="text" id="Verb2" placeholder="ANOTHER VERB">
   <br>
-  <input type="string" id="ADJECTIVE7" placeholder="ADJECTIVE">
+  <input type="text" id="ADJECTIVE7" placeholder="ADJECTIVE">
   <br>
-  <input type="string" id="PNoun3" placeholder="ANOTHER PLURAL NOUN">
+  <input type="text" id="PNoun3" placeholder="ANOTHER PLURAL NOUN">
   <br>
-  <input type="string" id="PNoun4" placeholder="ANOTHER PLURAL NOUN">
+  <input type="text" id="PNoun4" placeholder="ANOTHER PLURAL NOUN">
   <br>
-  <input type="string" id="Emotion2" placeholder="AN EMOTION">
+  <input type="text" id="Emotion2" placeholder="AN EMOTION">
   <br>
-  <input type="string" id="PNoun5" placeholder="ANOTHER PLURAL NOUN">
+  <input type="text" id="PNoun5" placeholder="ANOTHER PLURAL NOUN">
   <br>
   <button id="generateButton">Generate Mad Lib</button>
-  <div id="storyOutput"></div>
-  <script> 
+  <div id="StoryOutput"></div><script> 
+    
         document.getElementById('generateButton').addEventListener('click', function() {
           const ADJECTIVE1 = document.getElementById('ADJECTIVE1').value;
           const ADJECTIVE2 = document.getElementById('ADJECTIVE2').value;
@@ -82,8 +82,7 @@
           const Shape = document.getElementById('Shape').value;
           const verb1 = document.getElementById('Verb1').value;
           const verb2 = document.getElementById('Verb2').value;
-          
-                                                    
+                                             
             const story = `One sunny ${ADJECTIVE1} afternoon, the big day finally arrived! The ${ADJECTIVE2} couple, dressed in ${Color1} and ${Color2}, stood at the end of the ${Noun1}
             as their family and friends cheered. The ceremony was filled with ${Emotion1} , as the officiant declared, “I now pronounce you ${Noun2} and ${Noun3}!” The couple sealed the 
             deal with a ${ADJECTIVE3} kiss that made everyone ${verb1} in delight. At the reception, the ${ADJECTIVE4} cake stole the show. It was shaped like a ${Noun4} and topped with 
