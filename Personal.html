@@ -55,6 +55,7 @@
   <input type="string" id="PNoun5" placeholder="ANOTHER PLURAL NOUN">
   <br>
   <button id="generateButton">Generate Mad Lib</button>
+  <div id="storyOutput"></div>
   <script> 
         document.getElementById('generateButton').addEventListener('click', function() {
           const ADJECTIVE1 = document.getElementById('ADJECTIVE1').value;
@@ -82,8 +83,6 @@
           const verb1 = document.getElementById('Verb1').value;
           const verb2 = document.getElementById('Verb2').value;
           
-
-        <div id = "StoryOutline"> </div>
                                                     
             const story = `One sunny ${ADJECTIVE1} afternoon, the big day finally arrived! The ${ADJECTIVE2} couple, dressed in ${Color1} and ${Color2}, stood at the end of the ${Noun1}
             as their family and friends cheered. The ceremony was filled with ${Emotion1} , as the officiant declared, “I now pronounce you ${Noun2} and ${Noun3}!” The couple sealed the 
