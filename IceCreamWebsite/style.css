@@ -169,7 +169,7 @@ https://i.pinimg.com/736x/df/e7/13/dfe7131bb7f4740a4dbff3a94fc26e39.jpg        h
 .flavors {
   display: flex;
   justify-content: space-between;
-  
+  justify-content: center;
   flex-direction: row;
   gap: 15px;
   justify-content: flex-left;
