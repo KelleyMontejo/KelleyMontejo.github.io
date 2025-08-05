@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <div class="row3">
+    
+    <img class = "cart" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSerHX3qOfD7Itnm1p7OReWjfF3fvIf8DgusQ&s">
+   
+      
+    <img class = "userAcc" src= "https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg">
+  </div>
+
+
+  
+  <img class= "logo" src="https://imgur.com/a/1w5kHRL" width="100" height="150">
+  <img class= "mag" src= "https://thumb.ac-illust.com/e0/e0fe89affb93bb258c1c76edac62b8ee_t.jpeg">
+  <div class="searchBar">
+    <div class="bar">| Search your flavors</div>
+  </div>
+
+
+
+  <div class="flavors">
+    <div class="cube1">2</div>
+    <div class="cube1">3</div>
+    <div class="cube1">4</div>
+    <div class="cube1">5</div>
+    </div>
+  <div class="flavors">
+    <div class="cube1">6</div>
+    <div class="cube1">7</div>
+    <div class="cube1">8</div>
+    <div class="cube1">9</div>
+  </div>
+
+  
+
+  
+  
+</head>
+  </html>
