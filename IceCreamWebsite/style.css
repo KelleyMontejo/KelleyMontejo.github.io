@@ -25,36 +25,30 @@ html {
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s;
-  }
-
-
-  
-  
+  } 
 body {
   
   p {
     /* About me paragraph font */
     font-family:Source Sans Pro;
     font-size: 20px;
-    
   }
   margin: 5;
   padding: 5;
-
 }
-  /*
-.MainTitle{
-  text-align: left;
-  white-space: nowrap;
-  }
-  */
-
   /* main screen nav-link*/
 header {
+  text-align: center;
   font-family: Source Sans Pro;
   color: #DA7F7D;
   font-weight: bolder;
 }
+  header1 {
+  text-align: center;
+  font-family: Source Sans Pro;
+  color: #DA7F7D;
+  font-weight: bolder;
+  }
   .title{
     fomt-weight: Bolder;
     text-align: center;
@@ -63,8 +57,7 @@ header {
     margin-top: 80px;
     justify-content: center;
     background-color: #ffffff; 
-    border-radius: 15px;  
-      
+    border-radius: 15px;   
   }
 .btn {
   display: inline-block;
@@ -82,11 +75,9 @@ header {
   align-items: flex-start;
   margin: 10px, 1;
 }
-
   /* Start of actual order screen.*/
   
 /* size of the icons right hand side.*/
-
   .userAcc{
     border-radius: 10px;
     width: 50px;
@@ -97,7 +88,6 @@ header {
     width: 50px;
     height: 55px;
   }
-
 /* responsible for icons on the top right hand side.*/
 .row3 {
   display: flex;
@@ -106,7 +96,6 @@ header {
   margin: 25px;
   align-items: flex-start;
 }
-
 .row {
   display: flex;
   justify-content: center; /* center the days in each row */
@@ -137,58 +126,37 @@ header {
   font-weight: bold;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
-
-
-/* colored shortcut 
-
-
-  .container2 {
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    gap: 10px; 
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #e0f7e9;
+    padding: 20px;
   }
 
-https://i.pinimg.com/736x/df/e7/13/dfe7131bb7f4740a4dbff3a94fc26e39.jpg        heart for liked on icecream*/
-
-/* white cubes*/
-.cube1 {
-  /*need to use bottstrap for rows and columns */
-  background-color: #EBB58A;
-  color: black;
-  padding: 80px 60px;
-  margin: 5px;
-  font-weight: bold;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  border-width: 3px;
-    border-style: solid;
-    border-color: #FFF2BD;
-  border-radius: 35%;
-}
-
-.flavors {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  row-gap: 90px;
-  justify-content: flex-left;
-  align-items: flex-start;
-  /* End of Actual order screen.*/
-
-  
-
-  /* 
-  .cube2 {
-    background-color: #ffffff;
-    color: black;
-    height: 12;
-    width:12;
-    padding: 20px 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  #items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
   }
-  */
 
+  .item {
+    border: 5px solid #FFF2BD;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    width: 140px;
+    text-align: center;
+  }
 
+  .item img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .item.selected {
+    border: 2px solid black;
+  }
 }
- 
