@@ -170,7 +170,8 @@ https://i.pinimg.com/736x/df/e7/13/dfe7131bb7f4740a4dbff3a94fc26e39.jpg        h
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 30px;
+  row-gap: 30px;
+  column-gap: 25px;
   justify-content: flex-left;
   align-items: flex-start;
   /* End of Actual order screen.*/
