@@ -96,6 +96,7 @@ header {
   margin: 25px;
   align-items: flex-start;
 }
+
 .row {
   display: flex;
   justify-content: center; /* center the days in each row */
@@ -148,15 +149,16 @@ header {
     cursor: pointer;
     width: 140px;
     text-align: center;
+    border-radius: 10px
   }
 
   .item img {
-    width: 150px;
+    width: 120px;
     height: 100px;
     object-fit: contain;
   }
 
   .item.selected {
-    border: 2px solid black;
+    border: 5px solid #ffc677;
   }
 }
