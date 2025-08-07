@@ -23,11 +23,7 @@ body {
     color: #DA7F7D;
     font-weight: bolder;
   }
-.layoutReceipt{
-    display: flex; /* or display: inline-block; */
-    justify-content: space-between; /* For aligning items with space between */
-    align-items: center; /* For vertical alignment */
-  }
+
 
 
 
@@ -165,6 +161,11 @@ body {
   .info {
       border: 3px solid #F4D797; /* 2px width, solid style, light gray color */
       padding: 8px; /* Optional: Add padding for better visual appearance */
+  }
+  .layoutReceipt{
+    display: flex; /* or display: inline-block; */
+    justify-content: space-between; /* For aligning items with space between */
+    align-items: center; /* For vertical alignment */
   }
 
 
