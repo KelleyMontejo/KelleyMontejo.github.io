@@ -19,6 +19,7 @@ body {
   /* main screen nav-link*/
   header {
     text-align: center;
+    
     font-family: Source Sans Pro;
     color: #DA7F7D;
     font-weight: bolder;
@@ -142,7 +143,7 @@ body {
 
   .CartNum {
     position: absolute;
-    top: 220px;
+    top: 132px;
     margin-right: 34px;
     right: 16px;
   }
