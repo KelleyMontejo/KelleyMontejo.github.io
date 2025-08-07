@@ -23,7 +23,11 @@ body {
     color: #DA7F7D;
     font-weight: bolder;
   }
-
+.layoutReceipt{
+    display: flex; /* or display: inline-block; */
+    justify-content: space-between; /* For aligning items with space between */
+    align-items: center; /* For vertical alignment */
+  }
 
 
 
