@@ -44,58 +44,56 @@ function loadItems() {
     label.textContent = item.name;
     div.appendChild(img);
     div.appendChild(label);
+    div.appendChild(c);
 
-    let price =0;
+    
     // When this item box is clicked:
+    
     div.onclick = () => {
       selectedItem = item;
       highlightSelected(index);
       if(selectedItem.name ==="Honey Lavander"){
         alert("\t\t\t\t\tCost: 5.29");
-        price+=selectedItem.cost;
-        document.getElementById("price").innerText = price;
+
+      
       }
       if(selectedItem.name ==="Basil"){
         alert("\t\t\t\t\tCost: 4.25");
-        price+=selectedItem.cost;
-        document.getElementById("price").innerText = price;
+     
       }
       if(selectedItem.name ==="Penut butter and Jelly"){
         alert("\t\t\t\t\tCost: 6.54");
-        price+=selectedItem.cost;
-        document.getElementById("price").innerText = price;
+
+      
       }
       if(selectedItem.name ==="Balsamic Strawberry Sorbet"){
         alert("\t\t\t\t\tCost: 7.29");
-        price+=selectedItem.cost;
-        document.getElementById("price").innerText = price;
+    
       }
       let amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
       while(amt> 5){
         alert('Exceded the maximum amount of scoops per quantity 😢');
         amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
       }
-      let scoopAmt = (selectedItem.cost * amt);
-      let bowl = (selectedItem.cost + 3.00);
       let container = prompt("Cone or bowl (Note: bowl: + $3 extra dollars) :").toLowerCase();
       if(container === "cone"){
         alert('Cone selected 🍦');
         quantity++;
         document.getElementById("quantity").innerText = quantity;
-        price=+(selectedItem.cost *scoopAmt);
+    
       }
        else if(container ==="bowl"){
         alert('Bowl selected 🍨');
          quantity++;
          document.getElementById("quantity").innerText = quantity;
-         //document.getElementById("price").innerText = price;
-
+   
       }
       else{
         alert('Not an option');
       }
     };
     itemBox.appendChild(div);
+    
   });
 
   // Function to highlight which item is selected by the player
@@ -134,3 +132,4 @@ const SubBtn = document.getElementById('SubBtn');
       SubBtn.addEventListener('click', () => {
   alert('Information submitted 😊');
 });
+
