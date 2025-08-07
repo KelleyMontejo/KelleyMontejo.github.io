@@ -75,13 +75,14 @@ function loadItems() {
         alert('Exceded the maximum amount of scoops per quantity 😢');
         amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
       }
+      let scoopAmt = (selectedItem.cost * amt);
       let bowl = (selectedItem.cost + 3.00);
       let container = prompt("Cone or bowl (Note: bowl: + $3 extra dollars) :").toLowerCase();
       if(container === "cone"){
         alert('Cone selected 🍦');
         quantity++;
         document.getElementById("quantity").innerText = quantity;
-        document.getElementById("price").innerText = price;
+        price=+(selectedItem.cost *scoopAmt);
       }
        else if(container ==="bowl"){
         alert('Bowl selected 🍨');
@@ -89,7 +90,6 @@ function loadItems() {
          document.getElementById("quantity").innerText = quantity;
          //document.getElementById("price").innerText = price;
 
-         document.getElementById("price").innerHTML =price;
       }
       else{
         alert('Not an option');
@@ -115,4 +115,22 @@ document.addEventListener("DOMContentLoaded", () => {
 const contactBtn = document.getElementById('contactBtn');
 contactBtn.addEventListener('click', () => {
   alert('LinkedIn: https://www.linkedin.com/in/kelley-montejo-a87996369/');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const colorRadios = document.querySelectorAll('input[name="choice"]');
+    const displayElement = document.getElementById('selectedColorDisplay');
+
+    colorRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            if (radio.checked) {
+                displayElement.textContent = `You selected: ${radio.value}`;
+            }
+        });
+    });
+});
+
+const SubBtn = document.getElementById('SubBtn');
+      SubBtn.addEventListener('click', () => {
+  alert('Information submitted 😊');
 });
