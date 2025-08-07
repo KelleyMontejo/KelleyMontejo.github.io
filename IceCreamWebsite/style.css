@@ -5,29 +5,8 @@ html {
     background-image: linear-gradient(to bottom, #FFBE88, #F4D797, #DA7F7D);
 }
   /* Start of principle screen.*/
-  .rec {
-    display: flex;
-    justify-content: center; 
-    margin: 10px ;
-  }
-  .banner {
-    background-color: #ffffff;
-    color: white;
-    padding: 20px 5px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  }
-  .navbar {
-    text-decoration: none;
-    color: #333;
-    margin: 0 1rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-  } 
+
 body {
-  
   p {
     /* About me paragraph font */
     font-family:Source Sans Pro;
@@ -35,30 +14,39 @@ body {
   }
   margin: 5;
   padding: 5;
+  
 }
   /* main screen nav-link*/
-header {
-  text-align: center;
-  font-family: Source Sans Pro;
-  color: #DA7F7D;
-  font-weight: bolder;
-}
-  header1 {
-  text-align: center;
-  font-family: Source Sans Pro;
-  color: #DA7F7D;
-  font-weight: bolder;
-  }
-  .title{
-    fomt-weight: Bolder;
+  header {
     text-align: center;
+    font-family: Source Sans Pro;
+    color: #DA7F7D;
+    font-weight: bolder;
   }
+  
+
+
+
+
+
+  
+  
   .container {
     margin-top: 80px;
     justify-content: center;
     background-color: #ffffff; 
     border-radius: 15px;   
   }
+
+
+
+
+
+
+
+
+
+  
 .btn {
   display: inline-block;
   margin-top: 2rem;
@@ -70,24 +58,22 @@ header {
   border-radius: 8px;
 }
   /* End of principle screen.*/
+
+/*Add logo HERE: */
+
+
+
+
+
+
+
+
+
+
   
-.logo{
-  align-items: flex-start;
-  margin: 10px, 1;
-}
+
   /* Start of actual order screen.*/
   
-/* size of the icons right hand side.*/
-  .userAcc{
-    border-radius: 10px;
-    width: 50px;
-    height: 55px;
-  }
-  .cart{
-    border-radius: 10px;
-    width: 50px;
-    height: 55px;
-  }
 /* responsible for icons on the top right hand side.*/
 .row3 {
   display: flex;
@@ -103,14 +89,7 @@ header {
   margin: 10px 0;
 }
   /* search mag icon */
-  .mag{
-    height:40px;
-    width:50px ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
+
 .searchBar {
   display: flex;
   flex-direction: column;
@@ -133,7 +112,6 @@ header {
     background-color: #e0f7e9;
     padding: 20px;
   }
-
   #items {
     display: flex;
     justify-content: center;
@@ -161,4 +139,30 @@ header {
   .item.selected {
     border: 5px solid #ffc677;
   }
+
+  .CartNum {
+    position: absolute;
+    top: 220px;
+    margin-right: 34px;
+    right: 16px;
+  }
+
+  .rounded-image {
+    border-radius: 10px; /* Adjust the value for desired roundness */
+  }
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
 }
+ 
