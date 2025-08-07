@@ -27,7 +27,7 @@ const items = [
 
 //  to keep track if player clicked 
 let selectedItem = null;
-
+let quantity =0;
 function loadItems() {
   const itemBox = document.getElementById("items");
   itemBox.innerHTML = "";
@@ -44,14 +44,56 @@ function loadItems() {
     label.textContent = item.name;
     div.appendChild(img);
     div.appendChild(label);
-    
 
+    let price =0;
     // When this item box is clicked:
     div.onclick = () => {
       selectedItem = item;
       highlightSelected(index);
-      let amt = Number(prompt("How many scoops: "));
-      let container = prompt("Cone or bowl: ");
+      if(selectedItem.name ==="Honey Lavander"){
+        alert("\t\t\t\t\tCost: 5.29");
+        price+=selectedItem.cost;
+        document.getElementById("price").innerText = price;
+      }
+      if(selectedItem.name ==="Basil"){
+        alert("\t\t\t\t\tCost: 4.25");
+        price+=selectedItem.cost;
+        document.getElementById("price").innerText = price;
+      }
+      if(selectedItem.name ==="Penut butter and Jelly"){
+        alert("\t\t\t\t\tCost: 6.54");
+        price+=selectedItem.cost;
+        document.getElementById("price").innerText = price;
+      }
+      if(selectedItem.name ==="Balsamic Strawberry Sorbet"){
+        alert("\t\t\t\t\tCost: 7.29");
+        price+=selectedItem.cost;
+        document.getElementById("price").innerText = price;
+      }
+      let amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
+      while(amt> 5){
+        alert('Exceded the maximum amount of scoops per quantity 😢');
+        amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
+      }
+      let bowl = (selectedItem.cost + 3.00);
+      let container = prompt("Cone or bowl (Note: bowl: + $3 extra dollars) :").toLowerCase();
+      if(container === "cone"){
+        alert('Cone selected 🍦');
+        quantity++;
+        document.getElementById("quantity").innerText = quantity;
+        document.getElementById("price").innerText = price;
+      }
+       else if(container ==="bowl"){
+        alert('Bowl selected 🍨');
+         quantity++;
+         document.getElementById("quantity").innerText = quantity;
+         //document.getElementById("price").innerText = price;
+
+         document.getElementById("price").innerHTML =price;
+      }
+      else{
+        alert('Not an option');
+      }
     };
     itemBox.appendChild(div);
   });
@@ -68,4 +110,9 @@ function loadItems() {
 // Wait until the HTML page is fully loaded before running the game setup
 document.addEventListener("DOMContentLoaded", () => {
   loadItems(); 
+});
+
+const contactBtn = document.getElementById('contactBtn');
+contactBtn.addEventListener('click', () => {
+  alert('LinkedIn: https://www.linkedin.com/in/kelley-montejo-a87996369/');
 });
