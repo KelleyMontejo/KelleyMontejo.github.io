@@ -14,24 +14,23 @@ body {
   }
   margin: 5;
   padding: 5;
-  
+
 }
   /* main screen nav-link*/
   header {
     text-align: center;
-    
     font-family: Source Sans Pro;
     color: #DA7F7D;
     font-weight: bolder;
   }
-  
 
 
 
 
 
-  
-  
+
+
+
   .container {
     margin-top: 80px;
     justify-content: center;
@@ -46,8 +45,8 @@ body {
 
 
 
-
   
+
 .btn {
   display: inline-block;
   margin-top: 2rem;
@@ -71,10 +70,10 @@ body {
 
 
 
-  
+
 
   /* Start of actual order screen.*/
-  
+
 /* responsible for icons on the top right hand side.*/
 .row3 {
   display: flex;
@@ -152,13 +151,22 @@ body {
     border-radius: 10px; /* Adjust the value for desired roundness */
   }
 
+  .UserPic {
+    height: 230px;
+    width: 230px;
+    border: 8px solid #F4D797;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .info {
+      border: 3px solid #F4D797; /* 2px width, solid style, light gray color */
+      padding: 8px; /* Optional: Add padding for better visual appearance */
+  }
 
 
 
 
 
-
-  
 
 
 
@@ -166,4 +174,3 @@ body {
 
 
 }
- 
