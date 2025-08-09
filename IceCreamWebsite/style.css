@@ -159,13 +159,17 @@ body {
     display: inline-block;
   }
   .info {
-      border: 3px solid #F4D797; /* 2px width, solid style, light gray color */
-      padding: 8px; /* Optional: Add padding for better visual appearance */
+      border: 3px solid #F4D797; 
+      padding: 8px; 
   }
   .layoutReceipt{
-    display: flex; /* or display: inline-block; */
-    justify-content: space-between; /* For aligning items with space between */
-    align-items: center; /* For vertical alignment */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  .ChecOutMargin {
+    margin: 15px;
+    border: 5px dashed #F4D797;
   }
 
 
