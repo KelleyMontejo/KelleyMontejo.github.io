@@ -115,18 +115,11 @@ contactBtn.addEventListener('click', () => {
   alert('LinkedIn: https://www.linkedin.com/in/kelley-montejo-a87996369/');
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const colorRadios = document.querySelectorAll('input[name="choice"]');
-    const displayElement = document.getElementById('selectedColorDisplay');
-
-    colorRadios.forEach(radio => {
-        radio.addEventListener('change', () => {
-            if (radio.checked) {
-                displayElement.textContent = `You selected: ${radio.value}`;
-            }
-        });
-    });
+const payNow = document.getElementById('payNow');
+  payNow.addEventListener('click', () => {
+  alert('Perchuse was successful 😊');
 });
+
 
 const SubBtn = document.getElementById('SubBtn');
       SubBtn.addEventListener('click', () => {
