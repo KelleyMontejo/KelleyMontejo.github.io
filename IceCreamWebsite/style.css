@@ -16,36 +16,26 @@ body {
   padding: 5;
 
 }
+  
   /* main screen nav-link*/
   header {
     text-align: center;
-    font-family: Source Sans Pro;
-    color: #DA7F7D;
     font-weight: bolder;
+    font-family: Monospace;
+    color: #DA7F7D;
   }
-
-
-
-
-
-
-
-
   .container {
     margin-top: 80px;
     justify-content: center;
     background-color: #ffffff;   
   }
-
-
-
-
-
-
-
-
-  
-
+.reverse{
+  text-align: left;
+  color: #DA7F7D;
+}
+.userImage{
+  text-align: center;
+}
 .btn {
   display: inline-block;
   margin-top: 2rem;
@@ -59,18 +49,17 @@ body {
   /* End of principle screen.*/
 
 /*Add logo HERE: */
-
-
-
-
-
-
-
-
-
-
-
-
+  /* Ellipse 10 */
+.logo{
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 70px;
+  margin-left: 50px;
+  animation: fadeIn 10s ease-in-out;
+}
   /* Start of actual order screen.*/
 
 /* responsible for icons on the top right hand side.*/
@@ -158,7 +147,7 @@ body {
     display: inline-block;
   }
   .info {
-      border: 3px solid #F4D797; 
+      border: 3px solid #B5728E; 
       padding: 8px; 
   }
   .layoutReceipt{
@@ -170,15 +159,30 @@ body {
     margin: 15px;
     border: 5px dashed #F4D797;
   }
-
-
-
-
-
-
-
-
-
-
-
+  .frame1{
+    float: left;
+    margin-right: 15px;
+  }
+  .centered{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    margin-left: 30px;
+    transform: translate(-0%, -30%);
+    text-align: center;
+    color: #DA7F7D
+  }
+  .centered2{
+    position: absolute;
+    color: #F4D797;
+    top: 50%;
+    left: 30%;
+    margin-left: 30px;
+    transform: translate(-120%, 300%);
+    text-align: center;
+  }
+  .frame2{
+    float: right;
+    margin-left: 15px;
+  }
 }
