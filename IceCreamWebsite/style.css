@@ -60,6 +60,11 @@ body {
   margin-left: 50px;
   animation: bounce 7s infinite;
 }
+  @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }  /* Start at original position */
+  40% { transform: translateY(-30px); } /* Jump up */
+  60% { transform: translateY(-15px); } /* Smaller jump */
+}
   /* Start of actual order screen.*/
 
 /* responsible for icons on the top right hand side.*/
