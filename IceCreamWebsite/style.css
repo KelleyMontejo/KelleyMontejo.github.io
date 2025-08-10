@@ -58,6 +58,7 @@ body {
   position: relative;
   margin-top: 70px;
   margin-left: 50px;
+  animation: bounce 7s infinite;
 }
   /* Start of actual order screen.*/
 
