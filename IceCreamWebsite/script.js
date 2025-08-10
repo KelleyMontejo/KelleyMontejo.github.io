@@ -120,7 +120,6 @@ const payNow = document.getElementById('payNow');
   alert('Perchuse was successful 😊');
 });
 
-
 const SubBtn = document.getElementById('SubBtn');
       SubBtn.addEventListener('click', () => {
   alert('Information submitted 😊');
