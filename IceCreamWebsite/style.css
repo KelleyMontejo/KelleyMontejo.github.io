@@ -55,7 +55,7 @@ body {
   border-radius: 45%;
   overflow: hidden;
   position: relative;
-  margin-top: 70px;
+  margin-top: 50px;
   margin-left: 50px;
   animation: bounce 2s infinite;
 }
