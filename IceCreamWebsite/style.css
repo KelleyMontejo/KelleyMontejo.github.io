@@ -14,7 +14,9 @@ body {
   }
   margin: 5;
   padding: 5;
+
 }
+  
   /* main screen nav-link*/
   header {
     text-align: center;
@@ -44,7 +46,6 @@ body {
   font-weight: bold;
   border-radius: 8px;
 }
-
   /* End of principle screen.*/
 
 /*Add logo HERE: */
@@ -52,17 +53,11 @@ body {
 .logo{
   box-sizing: border-box;
   background-color: #ffffff;
-  border-radius: 45%;
+  border-radius: 50%;
   overflow: hidden;
   position: relative;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-left: 50px;
-  animation: bounce 2s infinite;
-}
-  @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }  /* Start at original position */
-  40% { transform: translateY(-30px); } /* Jump up */
-  60% { transform: translateY(-15px); } /* Smaller jump */
 }
   /* Start of actual order screen.*/
 
@@ -189,4 +184,5 @@ body {
     float: right;
     margin-left: 15px;
   }
+
 }
