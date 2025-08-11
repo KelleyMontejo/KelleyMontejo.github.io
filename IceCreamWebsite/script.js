@@ -1,4 +1,3 @@
-
 const items = [
   {
     name: "Honey Lavander",
@@ -119,6 +118,7 @@ const payNow = document.getElementById('payNow');
   payNow.addEventListener('click', () => {
   alert('Perchuse was successful 😊');
 });
+
 
 const SubBtn = document.getElementById('SubBtn');
       SubBtn.addEventListener('click', () => {
