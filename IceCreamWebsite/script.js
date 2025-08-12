@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const contactBtn = document.getElementById('contactBtn');
 contactBtn.addEventListener('click', () => {
-  alert('LinkedIn: https://www.linkedin.com/in/kelley-montejo-a87996369/');
+  alert('LinkedIn:\nhttps://www.linkedin.com/in/kelley-montejo-a87996369/ \n\n\t\t\t\t\t\tOR\n\nEmail:\nmontejokelley@gmail.com');
 });
 
 const payNow = document.getElementById('payNow');
