@@ -24,8 +24,16 @@
     <p>Address: <input type="text" class= "info" id="Adress" placeholder=""></p>
     <p>Email: <input type="text" class= "info" id="Email" placeholder=""></p>
     <p>Password: <input type="text" class= "info" id="Password" placeholder=""></p>
-    <button id="SubBtm" class="btn btn-warning">Submit</button>
     </header>
+  <button class = "btn btn-warning" id="myButton">Click Me</button>
+
+  <script>
+    const button = document.getElementById('myButton');
+
+    button.addEventListener('click', function() {
+      alert('Information was saved !');
+    });
+  </script>
 </head>
   <script src="script.js"></script>
   </html>
