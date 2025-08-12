@@ -1,188 +1,121 @@
-html {
-  height: 150%;
-  width: 100%;
-  body {
-    background-image: linear-gradient(to bottom, #FFBE88, #F4D797, #DA7F7D);
-}
-  /* Start of principle screen.*/
+const items = [
+  {
+    name: "Honey Lavander",
+    description: "Ingredients: Common ingredients include milk, cream, sugar (often replaced or augmented by honey), lavender (fresh or dried culinary lavender buds), and sometimes egg yolks for richness and creaminess. Some recipes also use cream cheese or mascarpone for an even silkier texture.",
+    cost: "5.29",
+    image: "https://icecreamfromscratch.com/wp-content/uploads/2023/07/Lavender-Ice-Cream-1.2-3-735x1102.jpg"
+  },
+  {
+    name: "Basil",
+    description: "",
+    cost: "4.25",
+    image: "https://www.gretchensveganbakery.com/wp-content/uploads/2018/09/thai-basil-cropped.jpg"
+  },
+  {
+    name: "Penut butter and Jelly", 
+    description: "",
+    cost: "6.54",
+    image: "https://www.browneyedbaker.com/wp-content/uploads/2014/07/peanut-butter-jelly-ice-cream-40-600.jpg"
+  },
+  {
+    name: "Balsamic Strawberry Sorbet", 
+    cost: "7.29",
+    image: "https://www.mythreeseasons.com/wp-content/uploads/2021/07/strawberry-balsamic-ice-cream-1200px-5.jpg"
+  },
+];
 
-body {
-  p {
-    /* About me paragraph font */
-    font-family:Source Sans Pro;
-    font-size: 20px;
-  }
-  margin: 5;
-  padding: 5;
+//  to keep track if player clicked 
+let selectedItem = null;
+let quantity =0;
+function loadItems() {
+  const itemBox = document.getElementById("items");
+  itemBox.innerHTML = "";
 
-}
-  
-  /* main screen nav-link*/
-  header {
-    text-align: center;
-    font-weight: bolder;
-    font-family: Monospace;
-    color: #DA7F7D;
-  }
-  .container {
-    margin-top: 80px;
-    justify-content: center;
-    background-color: #ffffff;   
-  }
-.reverse{
-  text-align: left;
-  color: #DA7F7D;
-}
-.userImage{
-  text-align: center;
-}
-.btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ffffff;
-  color: #DA7F7D;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-}
-  /* End of principle screen.*/
+  // Go through each item in the items array
+  items.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("item");
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.name;
+    const label = document.createElement("p");
+    const c = document.createElement("p");
+    label.textContent = item.name;
+    div.appendChild(img);
+    div.appendChild(label);
+    div.appendChild(c);
 
-/*Add logo HERE: */
-  /* Ellipse 10 */
-.logo{
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  margin-top: 70px;
-  margin-left: 50px;
-}
-  /* Start of actual order screen.*/
+    
+    // When this item box is clicked:
+    
+    div.onclick = () => {
+      selectedItem = item;
+      highlightSelected(index);
+      if(selectedItem.name ==="Honey Lavander"){
+        alert("\t\t\t\t\tCost: 5.29");
 
-/* responsible for icons on the top right hand side.*/
-.row3 {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 30px;
-  margin: 25px;
-  align-items: flex-start;
-}
+      
+      }
+      if(selectedItem.name ==="Basil"){
+        alert("\t\t\t\t\tCost: 4.25");
+     
+      }
+      if(selectedItem.name ==="Penut butter and Jelly"){
+        alert("\t\t\t\t\tCost: 6.54");
 
-.row {
-  display: flex;
-  justify-content: center; /* center the days in each row */
-  margin: 10px 0;
-}
-  /* search mag icon */
+      
+      }
+      if(selectedItem.name ==="Balsamic Strawberry Sorbet"){
+        alert("\t\t\t\t\tCost: 7.29");
+    
+      }
+      let amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
+      while(amt> 5){
+        alert('Exceded the maximum amount of scoops per quantity 😢');
+        amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
+      }
+      let container = prompt("Cone or bowl (Note: bowl: + $3 extra dollars) :").toLowerCase();
+      if(container === "cone"){
+        alert('Cone selected 🍦');
+        quantity++;
+        document.getElementById("quantity").innerText = quantity;
+    
+      }
+       else if(container ==="bowl"){
+        alert('Bowl selected 🍨');
+         quantity++;
+         document.getElementById("quantity").innerText = quantity;
+   
+      }
+      else{
+        alert('Not an option');
+      }
+    };
+    itemBox.appendChild(div);
+    
+  });
 
-.searchBar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-/* bar its self */
-.bar {
-  background-color: #ffffff;
-  color: #EBB58A;
-  padding: 15px 150px;
-  margin: 25px;
-  border-radius: 50px;
-  font-weight: bold;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
-  body {
-    font-family: sans-serif;
-    text-align: center;
-    background-color: #e0f7e9;
-    padding: 20px;
-  }
-  #items {
-    display: flex;
-    justify-content: center;
-    gap: 90px;
-    margin-bottom: 20px;
-    flex-wrap: wrap; 
-  }
-
-  .item {
-    border: 5px solid #FFF2BD;
-    padding: 10px;
-    background-color: white;
-    cursor: pointer;
-    width: 140px;
-    text-align: center;
-    border-radius: 10px
-  }
-
-  .item img {
-    width: 120px;
-    height: 100px;
-    object-fit: contain;
-  }
-
-  .item.selected {
-    border: 5px solid #ffc677;
-  }
-
-  .CartNum {
-    position: absolute;
-    top: 132px;
-    margin-right: 34px;
-    right: 16px;
-  }
-
-  .rounded-image {
-    border-radius: 10px; /* Adjust the value for desired roundness */
-  }
-
-  .UserPic {
-    height: 230px;
-    width: 230px;
-    border: 8px solid #F4D797;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .info {
-      border: 3px solid #B5728E; 
-      padding: 8px; 
-  }
-  .layoutReceipt{
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-  }
-  .ChecOutMargin {
-    margin: 15px;
-    border: 5px dashed #F4D797;
-  }
-  .frame1{
-    float: left;
-    margin-right: 15px;
-  }
-  .centered{
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    margin-left: 30px;
-    transform: translate(-0%, -30%);
-    text-align: center;
-    color: #DA7F7D
-  }
-  .centered2{
-    position: absolute;
-    color: #F4D797;
-    top: 50%;
-    left: 30%;
-    margin-left: 30px;
-    transform: translate(-120%, 300%);
-    text-align: center;
-  }
-  .frame2{
-    float: right;
-    margin-left: 15px;
+  // Function to highlight which item is selected by the player
+  function highlightSelected(index) {
+    document.querySelectorAll(".item").forEach((el, i) => {
+      el.classList.toggle("selected", i == index);
+    });
   }
 
 }
+
+// Wait until the HTML page is fully loaded before running the game setup
+document.addEventListener("DOMContentLoaded", () => {
+  loadItems(); 
+});
+
+const contactBtn = document.getElementById('contactBtn');
+contactBtn.addEventListener('click', () => {
+  alert('LinkedIn:\nhttps://www.linkedin.com/in/kelley-montejo-a87996369/ \n\n\t\t\t\t\t\tOR\n\nEmail:\nmontejokelley@gmail.com');
+});
+
+
+
+
+ 
+
