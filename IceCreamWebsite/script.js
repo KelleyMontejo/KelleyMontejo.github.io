@@ -114,14 +114,8 @@ contactBtn.addEventListener('click', () => {
   alert('LinkedIn:\nhttps://www.linkedin.com/in/kelley-montejo-a87996369/ \n\n\t\t\t\t\t\tOR\n\nEmail:\nmontejokelley@gmail.com');
 });
 
-const payNow = document.getElementById('payNow');
-  payNow.addEventListener('click', () => {
-  alert('Perchuse was successful 😊');
-});
 
 
-const SubBtn = document.getElementById('SubBtn');
-      SubBtn.addEventListener('click', () => {
-  alert('Information submitted 😊');
-});
+
+ 
 
