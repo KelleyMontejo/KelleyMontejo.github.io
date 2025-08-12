@@ -22,7 +22,7 @@
   </section>
   <section class="container my-5">
     <header>
-    <h2 class="text-center mb-4">Business</h2>
+    <h2 class="text-center mb-4">My Interests</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card h-100 text-center p-3">
@@ -46,14 +46,50 @@
         <div class="card h-100 text-center p-3">
          <header>
           <h3>Fun Fact 💡🤯</h3>
-          <p>The waffle cone was invented by accident at the 1904 St. Louis World's Fair by a Syrian concessionaire named Ernest Hamwi. He was selling a waffle-like pastry called zalabis when an ice cream vendor ran out of dishes. Hamwi rolled one of his waffles into a cone shape, creating a new way to serve ice cream. 
-</p>
+          <p>The waffle cone was invented by accident at the 1904 St. Louis World's Fair by a Syrian concessionaire named Ernest Hamwi.</p>
            </header>
         </div>
       </div>
     </div>
   </section>
   </header>
-    <button id="contactBtn" class="btn btn-warning ">Contact Me</button>
+
+    <style>
+          .get-started-button {
+              /* Basic button styling */
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #ffffff;
+            border: 3px solid #FFBE88;
+            color: #DA7F7D;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+              cursor: pointer;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+              transition: all 0.3s ease; /* Smooth transition for hover effects */
+              animation: bounce 2s infinite;
+          }
+          .get-started-button:hover {
+              background-color: #F4D797;
+              transform: scale(1.05);
+          }
+          @keyframes bounce {
+              0%, 20%, 50%, 80%, 100% {
+                  transform: translateY(0); /* The button is at its original position */
+              }
+              40% {
+                  transform: translateY(-30px); /* The button moves up */
+              }
+              60% {
+                  transform: translateY(-20px); /* The button moves down a bit */
+              }
+          }
+      </style>
+      <a button id="contactBtn" class="get-started-button">
+          Contact Me
+      </a>
+    </style>
         <script src="script.js"></script>
   </html>
