@@ -2,24 +2,24 @@ const items = [
   {
     name: "Honey Lavander",
     description: "Ingredients: Common ingredients include milk, cream, sugar (often replaced or augmented by honey), lavender (fresh or dried culinary lavender buds), and sometimes egg yolks for richness and creaminess. Some recipes also use cream cheese or mascarpone for an even silkier texture.",
-    cost: "5.29",
+    cost: "2.29",
     image: "https://icecreamfromscratch.com/wp-content/uploads/2023/07/Lavender-Ice-Cream-1.2-3-735x1102.jpg"
   },
   {
     name: "Basil",
     description: "",
-    cost: "4.25",
+    cost: "3.25",
     image: "https://www.gretchensveganbakery.com/wp-content/uploads/2018/09/thai-basil-cropped.jpg"
   },
   {
     name: "Penut butter and Jelly", 
     description: "",
-    cost: "6.54",
+    cost: "4.54",
     image: "https://www.browneyedbaker.com/wp-content/uploads/2014/07/peanut-butter-jelly-ice-cream-40-600.jpg"
   },
   {
     name: "Balsamic Strawberry Sorbet", 
-    cost: "7.29",
+    cost: "5.29",
     image: "https://www.mythreeseasons.com/wp-content/uploads/2021/07/strawberry-balsamic-ice-cream-1200px-5.jpg"
   },
 ];
@@ -55,16 +55,16 @@ function loadItems() {
       selectedItem = item;
       highlightSelected(index);
       if(selectedItem.name ==="Honey Lavander"){
-        alert("\t\t\t\t\tCost: 5.29");
+        alert("\t\t\t\t\tCost: 2.29");
       }
       if(selectedItem.name ==="Basil"){
-        alert("\t\t\t\t\tCost: 4.25");
+        alert("\t\t\t\t\tCost: 3.25");
       }
       if(selectedItem.name ==="Penut butter and Jelly"){
-        alert("\t\t\t\t\tCost: 6.54");
+        alert("\t\t\t\t\tCost: 4.54");
       }
       if(selectedItem.name ==="Balsamic Strawberry Sorbet"){
-        alert("\t\t\t\t\tCost: 7.29");
+        alert("\t\t\t\t\tCost: 5.29");
       }
       let amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
       while(amt> 5){
@@ -78,13 +78,15 @@ function loadItems() {
         document.getElementById("quantity").innerText = quantity;
         price = price + (amt * selectedItem.cost);
         document.getElementById("price").innerText = price;
-        purchasedItems.push(selectedItem);
+        purchasedItems.push(selectedItem.name, selectedItem.cost, selectedItem.amt);
       }
        else if(container ==="bowl"){
         alert('Bowl selected 🍨');
          quantity++;
          document.getElementById("quantity").innerText = quantity;
-   
+         price = price + (amt * selectedItem.cost + 3);
+         document.getElementById("price").innerText = price;
+         purchasedItems.push(selectedItem.name, selectedItem.cost, selectedItem.amt);
       }
       else{
         alert('Not an option');
