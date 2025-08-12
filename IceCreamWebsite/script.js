@@ -23,8 +23,11 @@ const items = [
     image: "https://www.mythreeseasons.com/wp-content/uploads/2021/07/strawberry-balsamic-ice-cream-1200px-5.jpg"
   },
 ];
+const purchasedItems = [];
+
 
 //  to keep track if player clicked 
+let price=0;
 let selectedItem = null;
 let quantity =0;
 function loadItems() {
@@ -53,21 +56,15 @@ function loadItems() {
       highlightSelected(index);
       if(selectedItem.name ==="Honey Lavander"){
         alert("\t\t\t\t\tCost: 5.29");
-
-      
       }
       if(selectedItem.name ==="Basil"){
         alert("\t\t\t\t\tCost: 4.25");
-     
       }
       if(selectedItem.name ==="Penut butter and Jelly"){
         alert("\t\t\t\t\tCost: 6.54");
-
-      
       }
       if(selectedItem.name ==="Balsamic Strawberry Sorbet"){
         alert("\t\t\t\t\tCost: 7.29");
-    
       }
       let amt = Number(prompt("How many scoops (Note: Max is 5 scoops): "));
       while(amt> 5){
@@ -79,7 +76,9 @@ function loadItems() {
         alert('Cone selected 🍦');
         quantity++;
         document.getElementById("quantity").innerText = quantity;
-    
+        price = price + (amt * selectedItem.cost);
+        document.getElementById("price").innerText = price;
+        purchasedItems.push(selectedItem);
       }
        else if(container ==="bowl"){
         alert('Bowl selected 🍨');
