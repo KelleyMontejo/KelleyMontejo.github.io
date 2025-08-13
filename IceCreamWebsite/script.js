@@ -88,6 +88,12 @@ function loadItems() {
                 speech.textContent = "";
               }, 2000); // 2,000 milliseconds, which equals 2 seconds
         }
+
+        let p = price;
+        let added = "+";
+        let message = added +p;
+        document.getElementById("price").innerHTML = message;
+
         const tax = (price +8.875/100);
         document.getElementById("Tax").innerText = tax;
         purchasedItems.push(selectedItem.name, selectedItem.amt, selectedItem.cost);
@@ -108,6 +114,10 @@ function loadItems() {
                }, 2000); // 2,000 milliseconds, which equals 2 seconds
          }
          document.getElementById("price").innerText = price;
+         let p = price;
+         let added = "+";
+         let message = added +p;
+         document.getElementById("price").innerHTML = message;
          const tax = (price +0.8875);
          document.getElementById("Tax").innerText = tax;
          purchasedItems.push(selectedItem.name, selectedItem.amt, selectedItem.cost);
@@ -137,7 +147,6 @@ const contactBtn = document.getElementById('contactBtn');
 contactBtn.addEventListener('click', () => {
   alert('LinkedIn:\nhttps://www.linkedin.com/in/kelley-montejo-a87996369/ \n\n\t\t\t\t\t\tOR\n\nEmail:\nmontejokelley@gmail.com');
 });
-
 
 
 
