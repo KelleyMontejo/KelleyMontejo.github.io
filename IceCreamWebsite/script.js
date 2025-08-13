@@ -90,7 +90,7 @@ function loadItems() {
         }
 
         let p = price;
-        let added = "+";
+        let added = "+ ";
         let message = added +p;
         document.getElementById("price").innerHTML = message;
 
@@ -115,7 +115,7 @@ function loadItems() {
          }
          document.getElementById("price").innerText = price;
          let p = price;
-         let added = "+";
+         let added = "+ ";
          let message = added +p;
          document.getElementById("price").innerHTML = message;
          const tax = (price +0.8875);
