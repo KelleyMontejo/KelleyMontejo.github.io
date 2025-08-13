@@ -48,9 +48,9 @@ function loadItems() {
     div.appendChild(label);
     div.appendChild(c);
 
-    
+
     // When this item box is clicked:
-    
+
     div.onclick = () => {
       selectedItem = item;
       highlightSelected(index);
@@ -78,22 +78,45 @@ function loadItems() {
         document.getElementById("quantity").innerText = quantity;
         price = price + (amt * selectedItem.cost);
         document.getElementById("price").innerText = price;
-        purchasedItems.push(selectedItem.name, selectedItem.cost, selectedItem.amt);
+        if(price>0){
+          const speech = document.getElementById("speech");                 // Div where Homer could "speak"
+          const homerLaugh = document.getElementById("moneySound");         // Audio file for Homer
+              speech.textContent = ""; // Clear any previous text
+              homerLaugh.play(); // Play Homer’s sound
+              // After 2 seconds, clear the speech area
+              setTimeout(() => {
+                speech.textContent = "";
+              }, 2000); // 2,000 milliseconds, which equals 2 seconds
+        }
+        const tax = (price +8.875/100);
+        document.getElementById("Tax").innerText = tax;
+        purchasedItems.push(selectedItem.name, selectedItem.amt, selectedItem.cost);
       }
        else if(container ==="bowl"){
         alert('Bowl selected 🍨');
          quantity++;
          document.getElementById("quantity").innerText = quantity;
          price = price + (amt * selectedItem.cost + 3);
+         if(price>0){
+           const speech = document.getElementById("speech");                 // Div where Homer could "speak"
+           const homerLaugh = document.getElementById("moneySound");         // Audio file for Homer
+               speech.textContent = ""; // Clear any previous text
+               homerLaugh.play(); // Play Homer’s sound
+               // After 2 seconds, clear the speech area
+               setTimeout(() => {
+                 speech.textContent = "";
+               }, 2000); // 2,000 milliseconds, which equals 2 seconds
+         }
          document.getElementById("price").innerText = price;
-         purchasedItems.push(selectedItem.name, selectedItem.cost, selectedItem.amt);
+         const tax = (price +0.8875);
+         document.getElementById("Tax").innerText = tax;
+         purchasedItems.push(selectedItem.name, selectedItem.amt, selectedItem.cost);
       }
       else{
         alert('Not an option');
       }
     };
     itemBox.appendChild(div);
-    
   });
 
   // Function to highlight which item is selected by the player
@@ -118,5 +141,7 @@ contactBtn.addEventListener('click', () => {
 
 
 
- 
+
+
+
 
