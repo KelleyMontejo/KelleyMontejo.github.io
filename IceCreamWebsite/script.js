@@ -80,10 +80,10 @@ function loadItems() {
         document.getElementById("price").innerText = price;
         if(price>0){
           const speech = document.getElementById("speech");                 // Div where Homer could "speak"
-          const homerLaugh = document.getElementById("moneySound");         // Audio file for Homer
-              speech.textContent = ""; // Clear any previous text
-              homerLaugh.play(); // Play Homer’s sound
-              // After 2 seconds, clear the speech area
+          const homerLaugh = document.getElementById("moneySound");         
+              speech.textContent = ""; 
+              homerLaugh.play(); 
+             
               setTimeout(() => {
                 speech.textContent = "";
               }, 2000); // 2,000 milliseconds, which equals 2 seconds
