@@ -16,6 +16,10 @@ body {
   padding: 5;
 
 }
+  .logo{
+    height: 50px;
+    width: 50px;
+  }
   
   /* main screen nav-link*/
   header {
